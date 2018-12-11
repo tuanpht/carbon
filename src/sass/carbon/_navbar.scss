@@ -2,5 +2,12 @@
   .navbar-brand {
     width: calc(#{$sidebar-width} - #{$navbar-padding-x});
     margin-right: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include media-breakpoint-down('md') {
+      width: auto;
+      max-width: calc(#{$sidebar-width} - #{$navbar-padding-x});
+    }
   }
 }
